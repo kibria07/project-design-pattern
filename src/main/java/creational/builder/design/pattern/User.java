@@ -3,6 +3,7 @@ package creational.builder.design.pattern;
 /*
   Builder Design Pattern is a category of Creational pattern and it
   is a way to construct complex object.
+
   Below is the User class that have some private fields/attributes.
 
   Please implement Builder Design Pattern.
@@ -11,16 +12,13 @@ package creational.builder.design.pattern;
   implement those.
  */
 public class User {
-    private final String userName;
-    private final String userEmail;
-    private final String userSSN;
-    private final int userAge;
+    private String userName;
+    private String userEmail;
+    private String userSSN;
+    private int userAge;
 
     public User(UserBuilder userBuilder){
-        this.userName = userBuilder.userName;
-        this.userEmail = userBuilder.userEmail;
-        this.userSSN = userBuilder.userSSN;
-        this.userAge = userBuilder.userAge;
+
     }
 
     public String getUserName() {
@@ -41,16 +39,6 @@ public class User {
 
 
     public static class UserBuilder {
-        private final String userName;
-        private final String userEmail;
-        private final String userSSN;
-        private final int userAge;
 
-        public UserBuilder(String userName, String userEmail, String userSSN, int userAge) {
-            this.userName = userName;
-            this.userEmail = userEmail;
-            this.userSSN = userSSN;
-            this.userAge = userAge;
-        }
     }
 }
