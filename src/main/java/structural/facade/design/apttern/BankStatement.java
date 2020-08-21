@@ -13,4 +13,13 @@ package structural.facade.design.apttern;
 
  */
 public class BankStatement {
+
+    public static void main(String[] args) {
+
+        CustomerInfo customerInfo = new CustomerInfo();
+        Balance balance = new Balance();
+        Statement statement = new Statement(customerInfo, balance);
+        statement.getBankStatement();
+
+    }
 }

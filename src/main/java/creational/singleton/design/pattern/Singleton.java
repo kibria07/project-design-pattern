@@ -11,4 +11,15 @@ package creational.singleton.design.pattern;
  */
 public class Singleton {
 
+    private static Singleton token = null;
+
+    private Singleton() {
+    }
+
+    public static Singleton getInstance(){
+        if(token==null){
+            token= new Singleton();
+        }
+        return token;
+    }
 }

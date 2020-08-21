@@ -17,28 +17,62 @@ public class User {
     private String userSSN;
     private int userAge;
 
-    public User(UserBuilder userBuilder){
-
+    public User() {
     }
+
+    public User(String userName, String userEmail, String userSSN, int userAge) {
+        this.userName = userName;
+        this.userEmail = userEmail;
+        this.userSSN = userSSN;
+        this.userAge = userAge;
+    }
+
+   /* public User(UserBuilder userBuilder){
+
+    }*/
 
     public String getUserName() {
         return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public String getUserEmail() {
         return userEmail;
     }
 
+    public void setUserEmail(String userEmail) {
+        this.userEmail = userEmail;
+    }
+
     public String getUserSSN() {
         return userSSN;
+    }
+
+    public void setUserSSN(String userSSN) {
+        this.userSSN = userSSN;
     }
 
     public int getUserAge() {
         return userAge;
     }
 
+    public void setUserAge(int userAge) {
+        this.userAge = userAge;
+    }
 
-    public static class UserBuilder {
+   /* public static class UserBuilder {
+
+    }*/
+
+
+    public String display() {
+        return  "userName=" + userName +
+                "\nuserEmail=" + userEmail +
+                "\nuserSSN=" + userSSN  +
+                "\nuserAge=" + userAge ;
 
     }
 }
